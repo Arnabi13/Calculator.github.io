@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <script>
+            function showresult(choise){
+                var n1=parseFloat(document.getElementById('num1').value);
+                var n2=parseFloat(document.getElementById('num2').value);
+                var r;
+                var c=choise;
+                
+                switch(c)
+                    {
+                        case '1':   r=n1+n2;
+                                    break;
+                        case '2':   r=n1-n2;
+                                    break;
+                        case '3':   r=n1*n2;
+                                    break;
+                        case '4':   r=n1/n2;
+                                    break;
+                        default:break;
+                            
+                    }
+                document.getElementById('result').value=r;
+                }
+        </script>
+    </head>
+    <body style="background-color:#D7C3F2;"><center>
+        <br><br><br><br>
+        <h1>My calculator</h1>
+        <hr width="30%"><br><br>
+        <table border="1" width="600">
+            <tr align="center">
+                <td><b>First number</b></td>
+                <td><b>Second Number</b></td>
+                <td><b>Result</b></td>
+            </tr>
+            <tr align="center">
+                <td><input name="number1" type="text" size=10 id='num1'/></td>
+                <td><input name="number2" type="text" size=10 id='num2'/></td>
+                <td> <input type="text" id='result' readonly ></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button onclick="showresult('1')" size=7>+</button>
+                    <button onclick="showresult('2')" size=7>-</button>
+                    <button onclick="showresult('3')" size=7>*</button>
+                    <button onclick="showresult('4')" size=7>/</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+    </body>
+</html>
